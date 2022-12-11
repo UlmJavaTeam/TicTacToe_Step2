@@ -77,7 +77,7 @@ public class TicTacToeMurat implements TicTacToe {
             } else if (pPos == 3) {
                 this.gameBoard[0][4] = symbol;
             } else if (pPos == 4) {
-                gameBoard[2][0] = symbol;
+                this.gameBoard[2][0] = symbol;
             } else if (pPos == 5) {
                 this.gameBoard[2][2] = symbol;
             } else if (pPos == 6) {
