@@ -16,14 +16,19 @@ public class Main {
         switch (nummer) {
             case 1:
                 ticTocToe = new TicTacToeMurat();
+                break;
             case 2:
                 ticTocToe = new TicTacToeKenan();
+                break;
             case 3:
                 ticTocToe = new TicTacToeNimetullah();
+                break;
             case 4:
                 ticTocToe = new TicTacToeSami();
+                break;
             default:
                 ticTocToe = new TicTacToeOzan();
+                break;
         }
 
 
