@@ -16,14 +16,8 @@ public class Main {
         int nummer = input.nextInt();
 
 
-        if (nummer == 1) ticTocToe = new TicTacToeMurat();
-        else if (nummer == 2) ticTocToe = new TicTacToeKenan();
-        else if (nummer == 3) ticTocToe = new TicTacToeNimetullah();
-        else if (nummer == 4) ticTocToe = new TicTacToeSami();
-        else System.exit(0);
 
-
-        /*switch (nummer) {
+        switch (nummer) {
             case 1:
                 ticTocToe = new TicTacToeMurat();
                 break;
@@ -39,7 +33,7 @@ public class Main {
             default:
                 ticTocToe = new TicTacToeOzan();
                 break;
-        }*/
+        }
 
 
         int number;
@@ -52,7 +46,7 @@ public class Main {
 
             //-- get number
             number = ticTocToe.enterNummer();
-            System.out.println(number);
+
             //- set the char
             if (ticTocToe.setChar('X', number) == false) {
                 System.out.println("not allowed");
