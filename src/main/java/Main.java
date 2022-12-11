@@ -10,10 +10,20 @@ public class Main {
         System.out.println("press 3: Nimetullah");
         System.out.println("press 4: Sami");
 
+        TicTacToe ticTocToe = null;
+
         Scanner input = new Scanner(System.in);
         int nummer = input.nextInt();
-        TicTacToe ticTocToe;
-        switch (nummer) {
+
+
+        if (nummer == 1) ticTocToe = new TicTacToeMurat();
+        else if (nummer == 2) ticTocToe = new TicTacToeKenan();
+        else if (nummer == 3) ticTocToe = new TicTacToeNimetullah();
+        else if (nummer == 4) ticTocToe = new TicTacToeSami();
+        else System.exit(0);
+
+
+        /*switch (nummer) {
             case 1:
                 ticTocToe = new TicTacToeMurat();
                 break;
@@ -29,10 +39,11 @@ public class Main {
             default:
                 ticTocToe = new TicTacToeOzan();
                 break;
-        }
+        }*/
 
 
         int number;
+
         while (true) {
 
             //-- Player - 1
@@ -41,7 +52,7 @@ public class Main {
 
             //-- get number
             number = ticTocToe.enterNummer();
-
+            System.out.println(number);
             //- set the char
             if (ticTocToe.setChar('X', number) == false) {
                 System.out.println("not allowed");
