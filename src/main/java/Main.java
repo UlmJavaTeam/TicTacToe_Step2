@@ -10,9 +10,13 @@ public class Main {
         System.out.println("press 3: Nimetullah");
         System.out.println("press 4: Sami");
 
+        TicTacToe ticTocToe = null;
+
         Scanner input = new Scanner(System.in);
         int nummer = input.nextInt();
-        TicTacToe ticTocToe;
+
+
+
         switch (nummer) {
             case 1:
                 ticTocToe = new TicTacToeMurat();
@@ -33,6 +37,7 @@ public class Main {
 
 
         int number;
+
         while (true) {
 
             //-- Player - 1
