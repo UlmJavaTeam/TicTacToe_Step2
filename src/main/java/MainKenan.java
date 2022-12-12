@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
-public class Main {
-
+public class MainKenan {
     public static void main(String[] args) {
 
         System.out.println("Please select the developer:");
@@ -14,8 +13,6 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         int nummer = input.nextInt();
-
-
 
         switch (nummer) {
             case 1:
@@ -37,50 +34,34 @@ public class Main {
 
 
         int number;
-
+        int count = 1;
         while (true) {
 
-            //-- Player - 1
-            // --  print the table
             ticTocToe.print();
-
-            //-- get number
             number = ticTocToe.enterNummer();
 
-            //- set the char
-            if (ticTocToe.setChar('X', number) == false) {
-                System.out.println("not allowed");
-                continue;
+            if (count % 2 == 1) {
+                if (ticTocToe.setChar('X', number)) {
+                    count++;
+                }
+                if (ticTocToe.checkWinner()) {
+                    System.out.println("player 1 Winner");
+                    ticTocToe.print();
+                    break;
+                } else
+                    continue;
+            } else if (count % 2 == 0) {
+                if (ticTocToe.setChar('0', number)) {
+                    count++;
+                }
+                if (ticTocToe.checkWinner()) {
+                    System.out.println("player 2 Winner");
+                    ticTocToe.print();
+                    break;
+                } else
+                    continue;
             }
-
-            // check winner
-            if (ticTocToe.checkWinner() == true) {
-                System.out.println("Player 1 won!");
-                ticTocToe.print();
-                break;
-            }
-
-            //-- Player - 2
-            // --  print the table
-            ticTocToe.print();
-
-            //-- get number
-            number = ticTocToe.enterNummer();
-
-            //- set the char
-            if (ticTocToe.setChar('0', number) == false) {
-                System.out.println("not allowed");
-                continue;
-            }
-
-            // check winner
-            if (ticTocToe.checkWinner() == true) {
-                System.out.println("Player 2 won!");
-                ticTocToe.print();
-                break;
-            }
+            break;
         }
     }
-
 }
-
