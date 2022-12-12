@@ -56,6 +56,7 @@ public class Main {
             // check winner
             if (ticTocToe.checkWinner() == true) {
                 System.out.println("Player 1 won!");
+                ticTocToe.print();
                 break;
             }
 
@@ -75,6 +76,7 @@ public class Main {
             // check winner
             if (ticTocToe.checkWinner() == true) {
                 System.out.println("Player 2 won!");
+                ticTocToe.print();
                 break;
             }
         }
